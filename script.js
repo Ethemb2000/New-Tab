@@ -39,7 +39,7 @@ document.getElementById('search').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         const query = e.target.value;
         if (query) {
-            window.location.href = `https://www.google.com/search?q=${query}`;
+            window.location.href = `https://${query}/`;
         }
     }
 });
