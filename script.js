@@ -25,7 +25,7 @@ function updateTime() {
 }
 
 // Set interval to update time every second
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
 
 // Search functionality
 document.getElementById('searchButton').addEventListener('click', function() {

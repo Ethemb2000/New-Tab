@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_task" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="localsave.js">
+</head>
+
+      <body>
+        <a class="button" href="index.html"><span class="material-symbols-rounded">
+          close
+    </span></a>
+        <main>
+          <h1>Tasks</h1>
+          <style>
+            body {
+              font - family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 20px;
+                  background-color: #f4f4f9;
+              }
+              main {
+              max - width: 600px;
+                  margin: 0 auto;
+                  background-color: #fff;
+                  padding: 20px;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              }
+              h1 {
+              text - align: center;
+              }
+              .toolbox {
+              display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 20px;
+              }
+              .toolbox input[type="text"] {
+              width: 70%;
+                  padding: 8px;
+                  font-size: 16px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+              }
+              .toolbox button {
+              padding: 10px 15px;
+                  background-color: #007BFF;
+                  color: white;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+              }
+              .toolbox button:hover {
+              background - color: #0056b3;
+              }
+              .task-list {
+              list - style: none;
+                  padding: 0;
+              }
+              .task-list li {
+              background - color: #f9f9f9;
+                  padding: 10px;
+                  margin: 8px 0;
+                  border-radius: 4px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+              }
+              .task-list li button {
+              background - color: #dc3545;
+                  padding: 5px 10px;
+                  border: none;
+                  color: white;
+                  border-radius: 4px;
+                  cursor: pointer;
+              }
+              .task-list li button:hover {
+              background - color: #c82333;
+              }
+          </style>
+          <body>
+            <main>
+              <div class="toolbox">
+                <input type="text" id="taskInput" placeholder="Enter a task">
+                  <button id="addTaskBtn">Add Task</button>
+              </div>
+                <ul id="taskList" class="task-list">
+                  <!-- Tasks will appear here -->
+              </ul>
+          </main>
+
+              <script>
+                document.getElementById("addTaskBtn").addEventListener("click", function() {
+                  const taskInput = document.getElementById("taskInput");
+                  const taskText = taskInput.value.trim();
+
+                  if (taskText === "") {
+                  alert("Please enter a task!");
+                      return;
+                  }
+
+                  // Create a new list item
+                  const li = document.createElement("li");
+                  li.innerHTML = `${taskText} <button class="removeBtn">Remove</button>`;
+
+                  // Append the new task to the task list
+                  document.getElementById("taskList").appendChild(li);
+
+                  // Clear the input field
+                  taskInput.value = "";
+
+                  // Add remove functionality
+                  li.querySelector(".removeBtn").addEventListener("click", function() {
+                  li.remove();
+                  });
+              });
+
+              // Optional: Allow pressing 'Enter' to add a task
+              document.getElementById("taskInput").addEventListener("keypress", function(event) {
+                  if (event.key === "Enter") {
+                  document.getElementById("addTaskBtn").click();
+                  }
+              });
+  </script>
+  </body>
+
+</html>
+
+</main>
+</body>
+
+</html>
