@@ -3,4 +3,9 @@ function focus(object) {
   object.focus();
 }
 
-document.getElementById("")
+searchBar = document.getElementById("search");
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode === 32) {
+    focus("searchBar")
+  }
+});
