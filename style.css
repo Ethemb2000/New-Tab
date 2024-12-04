@@ -94,5 +94,7 @@ footer {
   position: absolute;
   right: 5px;
   top: 5px;
+body {
+  overflow: hidden;
 }
 
