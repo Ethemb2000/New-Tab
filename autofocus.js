@@ -6,6 +6,10 @@ function focus(object) {
 searchBar = document.getElementById("search");
 document.addEventListener('keydown', function(event) {
   if (event.keyCode === 49) {
-    focus("searchBar")
+    focus("searchBar");
   }
+});
+
+window.addEventListener('load', function() {
+    object.focus(searchBar);
 });
