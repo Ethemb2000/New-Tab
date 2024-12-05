@@ -8,7 +8,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Tab</title>
     <link rel="stylesheet" href="style.css">
-    <script src="autofocus.js"></script>
+    <script>
+
+function focus(object) {
+  document.getElementById(object);
+  object.focus();
+}
+
+searchBar = document.getElementById("search");
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode === 49) {
+    focus("searchBar");
+  }
+});
+
+window.addEventListener('load', function() {
+    object.focus(searchBar);
+});
+
+        
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Comfortaa:wght@300&family=Doto:wght@100..900&family=Kablammo&family=Poiret+One&family=Quicksand:wght@300&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
